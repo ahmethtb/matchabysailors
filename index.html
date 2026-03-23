@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Matcha by Sailors</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: elegante serif + clean sans-serif -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ========== NAVIGATIE ========== -->
+  <nav class="nav">
+    <div class="nav__logo">Matcha <span>by Sailors</span></div>
+    <ul class="nav__links">
+      <li><a href="#over-ons">Over ons</a></li>
+      <li><a href="#drankjes">Drankjes</a></li>
+      <li><a href="#instagram">Instagram</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ========== HERO SECTIE ========== -->
+  <section class="hero" id="home">
+    <div class="hero__content">
+      <!-- Decoratief Japans karakter voor "thee" -->
+      <span class="hero__kanji">茶</span>
+      <h1 class="hero__title">Matcha by Sailors</h1>
+      <p class="hero__subtitle">Ambachtelijke matcha drankjes · Speciaal voor jouw event</p>
+      <a href="#contact" class="btn btn--primary">Vraag een offerte aan</a>
+    </div>
+    <div class="hero__decoration"></div>
+  </section>
+
+  <!-- ========== OVER ONS SECTIE ========== -->
+  <section class="about" id="over-ons">
+    <div class="about__image">
+      <!--
+        VERVANG DEZE AFBEELDING:
+        Gebruik jouw eigen productfoto — bijv. de drie gelaagde drankjes.
+        Zet het bestand in dezelfde map en verander de src hieronder.
+      -->
+      <img src="jouw-foto.jpg" alt="Matcha by Sailors drankjes op een event"
+           onerror="this.style.background='#e8f0e9'; this.style.minHeight='420px'; this.removeAttribute('src');" />
+    </div>
+    <div class="about__text">
+      <p class="section__label">Ons verhaal</p>
+      <h2 class="section__title">Passie voor matcha, <br>gemaakt voor jouw moment</h2>
+      <p>Matcha by Sailors brengt de kalmte en energie van premium matcha rechtstreeks naar jouw event. Van bruiloften en bedrijfsfeesten tot markten en pop-ups — wij zorgen voor een unieke beleving die jouw gasten bijblijft.</p>
+      <p>Elk drankje wordt vers bereid met ceremonial grade matcha, gecombineerd met verrassende smaken en prachtige lagen. Oog voor detail, van eerste oogst tot laatste slok.</p>
+      <a href="#contact" class="btn btn--secondary">Boek ons voor jouw event</a>
+    </div>
+  </section>
+
+  <!-- ========== DRANKJES SECTIE ========== -->
+  <section class="menu" id="drankjes">
+    <p class="section__label">Ons aanbod</p>
+    <h2 class="section__title">Handgemaakte matcha drankjes</h2>
+    <p class="menu__intro">Elk drankje is vers bereid, prachtig gelaagd en op maat samen te stellen voor jouw event.</p>
+
+    <div class="menu__grid">
+
+      <!-- Drankje 1 -->
+      <div class="menu__card">
+        <div class="menu__icon">🍋</div>
+        <h3>Matcha Mango Latte</h3>
+        <p>Fluweelzachte matcha gecombineerd met romige melk en een zoete mangobasis. Fris, tropisch en verrassend in balans.</p>
+        <span class="menu__tag">Populairste keuze</span>
+      </div>
+
+      <!-- Drankje 2 -->
+      <div class="menu__card">
+        <div class="menu__icon">🍫</div>
+        <h3>Matcha Chocolade Latte</h3>
+        <p>De rijke bitterheid van pure chocolade ontmoet de aardse diepte van matcha. Een luxe combinatie voor de liefhebber.</p>
+        <span class="menu__tag">Nieuw</span>
+      </div>
+
+      <!-- Drankje 3 -->
+      <div class="menu__card">
+        <div class="menu__icon">🍮</div>
+        <h3>Matcha Karamel Latte</h3>
+        <p>Zachte karamel als basis, gevuld met koude melk en een krachtige laag verse matcha. Zoet, complex en verslavend lekker.</p>
+        <span class="menu__tag">Fan favoriet</span>
+      </div>
+
+      <!-- Drankje 4 — optioneel aanpasbaar -->
+      <div class="menu__card menu__card--custom">
+        <div class="menu__icon">✨</div>
+        <h3>Op maat voor jouw event</h3>
+        <p>Wij denken graag met je mee over een speciale smaak of presentatie die past bij de stijl van jouw evenement.</p>
+        <a href="#contact" class="btn btn--secondary btn--small">Neem contact op</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== INSTAGRAM SECTIE ========== -->
+  <section class="instagram" id="instagram">
+    <p class="section__label">Sociale media</p>
+    <h2 class="section__title">Volg ons op Instagram</h2>
+    <p class="instagram__handle">@matchabysailor</p>
+
+    <!--
+      FOTO'S VERVANGEN:
+      Zet jouw eigen Instagram-screenshots in dezelfde map en pas de src-waarden aan.
+      Bijv.: src="insta1.jpg", src="insta2.jpg", etc.
+    -->
+    <div class="instagram__grid">
+      <div class="instagram__item">
+        <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=400&q=80" alt="Instagram post 1"
+             onerror="this.parentElement.style.background='#e8f0e9';" />
+        <div class="instagram__overlay"><span>❤ 142</span></div>
+      </div>
+      <div class="instagram__item">
+        <img src="https://images.unsplash.com/photo-1545830756-c3b57c65476e?w=400&q=80" alt="Instagram post 2"
+             onerror="this.parentElement.style.background='#e8f0e9';" />
+        <div class="instagram__overlay"><span>❤ 98</span></div>
+      </div>
+      <div class="instagram__item">
+        <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&q=80" alt="Instagram post 3"
+             onerror="this.parentElement.style.background='#e8f0e9';" />
+        <div class="instagram__overlay"><span>❤ 211</span></div>
+      </div>
+      <div class="instagram__item">
+        <img src="https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?w=400&q=80" alt="Instagram post 4"
+             onerror="this.parentElement.style.background='#e8f0e9';" />
+        <div class="instagram__overlay"><span>❤ 175</span></div>
+      </div>
+    </div>
+
+    <a href="https://www.instagram.com/matchabysailor/" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+      Bekijk Instagram
+    </a>
+  </section>
+
+  <!-- ========== CONTACT SECTIE ========== -->
+  <section class="contact" id="contact">
+    <p class="section__label">Samenwerken?</p>
+    <h2 class="section__title">Vraag een offerte aan</h2>
+    <p class="contact__text">Organiseer jij een event en wil je onze matcha bar erbij? Stuur ons een berichtje en we komen graag langs om het te bespreken.</p>
+
+    <!-- VERVANG met jouw echte e-mailadres -->
+    <a href="mailto:hello@matchabysailors.com" class="contact__email">hello@matchabysailors.com</a>
+
+    <div class="contact__social">
+      <a href="https://www.instagram.com/matchabysailor/" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
+        Instagram DM
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <p class="footer__logo">Matcha <span>by Sailors</span></p>
+    <p class="footer__copy">© 2025 Matcha by Sailors · Alle rechten voorbehouden</p>
+  </footer>
+
+</body>
+</html>
