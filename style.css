@@ -1,0 +1,458 @@
+/* ============================================
+   MATCHA BY SAILORS — Stylesheet
+   Stijl: Japans minimaal, clean, premium
+   Kleuren: zacht groen, beige, wit
+   ============================================ */
+
+/* ---- RESET & BASIS ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* === KLEUREN — pas hier aan === */
+  --green-dark:   #3a5a40;
+  --green-mid:    #6b8f71;
+  --green-light:  #a8c5a0;
+  --green-pale:   #e8f0e9;
+  --beige:        #f5f0e8;
+  --beige-dark:   #e8e0d0;
+  --white:        #ffffff;
+  --text-dark:    #2c2c2c;
+  --text-mid:     #5a5a5a;
+  --text-light:   #8a8a8a;
+
+  /* === FONTS === */
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Lato', Arial, sans-serif;
+
+  --section-padding: 90px 24px;
+  --max-width: 1100px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background-color: var(--white);
+  line-height: 1.7;
+}
+
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+
+/* ---- GEDEELDE LABELS & TITELS ---- */
+.section__label {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--green-mid);
+  margin-bottom: 10px;
+}
+
+.section__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  color: var(--green-dark);
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+/* ---- KNOPPEN ---- */
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 2px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn--primary {
+  background-color: var(--green-dark);
+  color: var(--white);
+  border: 2px solid var(--green-dark);
+}
+.btn--primary:hover {
+  background-color: transparent;
+  color: var(--green-dark);
+}
+.btn--secondary {
+  background-color: transparent;
+  color: var(--green-dark);
+  border: 2px solid var(--green-dark);
+}
+.btn--secondary:hover {
+  background-color: var(--green-dark);
+  color: var(--white);
+}
+.btn--small {
+  padding: 10px 20px;
+  font-size: 0.75rem;
+}
+
+
+/* ============================================
+   NAVIGATIE
+   ============================================ */
+.nav {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 48px;
+  background-color: rgba(255,255,255,0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--beige-dark);
+}
+.nav__logo {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--green-dark);
+  letter-spacing: 0.05em;
+}
+.nav__logo span { font-weight: 300; color: var(--green-mid); }
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+}
+.nav__links a {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  transition: color 0.2s;
+}
+.nav__links a:hover { color: var(--green-dark); }
+
+
+/* ============================================
+   HERO SECTIE
+   ============================================ */
+.hero {
+  min-height: 100vh;
+  background-color: var(--beige);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 24px 80px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background-color: var(--green-pale);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+}
+.hero__kanji {
+  display: block;
+  font-family: serif;
+  font-size: 5rem;
+  color: var(--green-light);
+  line-height: 1;
+  margin-bottom: 12px;
+  opacity: 0.6;
+}
+.hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 300;
+  color: var(--green-dark);
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+.hero__subtitle {
+  font-size: 1rem;
+  color: var(--text-mid);
+  letter-spacing: 0.08em;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+
+/* ============================================
+   OVER ONS SECTIE
+   ============================================ */
+.about {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  padding: var(--section-padding);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.about__image {
+  flex: 1 1 320px;
+}
+.about__image img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 4px;
+  background-color: var(--green-pale); /* fallback als foto ontbreekt */
+  min-height: 300px;
+}
+.about__text { flex: 1 1 320px; }
+.about__text p {
+  color: var(--text-mid);
+  margin-bottom: 16px;
+  font-size: 0.97rem;
+}
+.about__text .btn { margin-top: 16px; }
+
+
+/* ============================================
+   DRANKJES / MENU SECTIE
+   ============================================ */
+.menu {
+  padding: var(--section-padding);
+  background-color: var(--beige);
+  text-align: center;
+}
+.menu__intro {
+  max-width: 560px;
+  margin: -24px auto 48px;
+  color: var(--text-mid);
+  font-size: 0.97rem;
+}
+
+/* 2×2 grid van kaarten */
+.menu__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  justify-content: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.menu__card {
+  flex: 1 1 240px;
+  max-width: 280px;
+  background-color: var(--white);
+  border-radius: 4px;
+  padding: 36px 28px;
+  text-align: left;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.menu__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+}
+
+/* Kaart voor maatwerkoptie: subtiel anders */
+.menu__card--custom {
+  border: 2px dashed var(--green-light);
+  background-color: var(--green-pale);
+}
+
+.menu__icon {
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+.menu__card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--green-dark);
+  margin-bottom: 10px;
+}
+.menu__card p {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+/* Badge label: "Populairste keuze", "Nieuw", etc. */
+.menu__tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green-mid);
+  border: 1px solid var(--green-light);
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+
+/* ============================================
+   INSTAGRAM SECTIE
+   ============================================ */
+.instagram {
+  padding: var(--section-padding);
+  text-align: center;
+  background-color: var(--white);
+}
+.instagram__handle {
+  font-size: 0.9rem;
+  color: var(--green-mid);
+  letter-spacing: 0.15em;
+  margin-top: -28px;
+  margin-bottom: 40px;
+}
+
+/* 2×2 fotogrid */
+.instagram__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  max-width: 860px;
+  margin: 0 auto 40px;
+}
+.instagram__item {
+  flex: 1 1 180px;
+  max-width: 200px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--green-pale);
+  min-height: 200px;
+}
+.instagram__item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+}
+.instagram__item:hover img { transform: scale(1.06); }
+
+.instagram__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(58,90,64,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.instagram__item:hover .instagram__overlay { opacity: 1; }
+.instagram__overlay span {
+  color: var(--white);
+  font-size: 1rem;
+}
+
+
+/* ============================================
+   CONTACT SECTIE
+   ============================================ */
+.contact {
+  padding: var(--section-padding);
+  background-color: var(--green-dark);
+  text-align: center;
+}
+.contact .section__label { color: var(--green-light); }
+.contact .section__title { color: var(--white); }
+
+.contact__text {
+  color: var(--green-pale);
+  font-size: 0.97rem;
+  margin-bottom: 28px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact__email {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--white);
+  border-bottom: 1px solid var(--green-light);
+  padding-bottom: 4px;
+  margin-bottom: 36px;
+  transition: color 0.2s;
+}
+.contact__email:hover { color: var(--green-light); }
+
+.contact .btn--secondary {
+  color: var(--white);
+  border-color: var(--white);
+}
+.contact .btn--secondary:hover {
+  background-color: var(--white);
+  color: var(--green-dark);
+}
+
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  padding: 32px 24px;
+  background-color: #2a4030;
+  text-align: center;
+}
+.footer__logo {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--green-pale);
+  margin-bottom: 6px;
+}
+.footer__logo span { color: var(--green-light); font-weight: 300; }
+.footer__copy {
+  font-size: 0.75rem;
+  color: var(--green-mid);
+  letter-spacing: 0.08em;
+}
+
+
+/* ============================================
+   RESPONSIVE — MOBIEL & TABLET
+   ============================================ */
+@media (max-width: 768px) {
+
+  .nav { padding: 16px 24px; }
+  .nav__links { display: none; }
+
+  .hero::before { width: 320px; height: 320px; }
+
+  /* Over ons stapelt verticaal */
+  .about {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .about__image img { height: 280px; }
+
+  /* Drankjes kaarten: volle breedte op mobiel */
+  .menu__card {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  /* Instagram grid: 2 kolommen */
+  .instagram__item {
+    flex: 1 1 140px;
+    max-width: 160px;
+  }
+  .instagram__item img { height: 160px; }
+}
